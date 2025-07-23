@@ -2,7 +2,7 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 require("dotenv").config();
 
-const { ETHERSCAN_API_KEY, PRIVATE_KEY, SEPOLIA_URL_KEY } = process.env;
+const { ETHERSCAN_API_KEY, PRIVATE_KEY, SEPOLIA_URL_KEY, CORE_SCAN } = process.env;
 
 const config: HardhatUserConfig = {
   solidity: "0.8.30",
@@ -20,7 +20,10 @@ const config: HardhatUserConfig = {
     }
   },
   etherscan: {
-    apiKey: ETHERSCAN_API_KEY,
+    apiKey: {
+      sepolia: ETHERSCAN_API_KEY?.toString() || "",
+      coreDao: ETHERSCAN_API_KEY?.toString() || "",
+    },
     customChains: [
       {
         network: "coreDao",

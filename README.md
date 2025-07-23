@@ -4,5 +4,7 @@
 
 - Storage coreDAO contract address FOUNDRY: 0x1480879Da40cD708A9bE3829D05BAF9350912Cc0
 
+- Storage coreDAO contract address HARDHAT: 0xdbc612e1563775aaaF71f52493481E4c2Cdf37aC
+
 
 https://sepolia.etherscan.io/address/0x7bedb4017df820eae57c8c9d4a9fb90d723d9f25
